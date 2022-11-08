@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Register">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,15 +29,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_wm">
-
-        </ImageView>
+            app:srcCompat="@drawable/ic_wm"></ImageView>
 
         <TextView
             android:layout_width="277dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Sign in to your account"
+            android:text="Create Your New account"
             android:textAlignment="center"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -52,9 +51,22 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="178dp"
+                android:layout_width="143dp"
                 android:layout_height="wrap_content"
-                android:text="Email address (required)"
+                android:text="* required field"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:text="First Name *"
                 android:textAlignment="center"
                 android:textSize="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -67,20 +79,79 @@
                 android:layout_height="1dp" />
 
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/firstName"
                 android:layout_width="337dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="10"
-                android:hint="Email address"
+                android:hint="First Name"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="100dp"
                 tools:layout_editor_absoluteY="535dp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+            <TextView
+                android:layout_width="109dp"
+                android:layout_height="wrap_content"
+                android:text="Last Name *"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <EditText
+                android:id="@+id/lastName"
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="100dp"
+                tools:layout_editor_absoluteY="535dp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
             <TextView
-                android:layout_width="150dp"
+                android:layout_width="138dp"
                 android:layout_height="wrap_content"
-                android:text="Password (required)"
+                android:text="Email Address *"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <EditText
+                android:id="@+id/emailAddress"
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                tools:layout_editor_absoluteX="100dp"
+                tools:layout_editor_absoluteY="535dp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+            <TextView
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:text="Password *"
                 android:textAlignment="center"
                 android:textSize="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -103,79 +174,20 @@
                 tools:layout_editor_absoluteX="100dp"
                 tools:layout_editor_absoluteY="535dp" />
 
-            <TextView
-                android:id="@+id/forgotPass"
-                android:layout_width="336dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:autoLink="all"
-                android:clickable="true"
-                android:text="Forgot Password?"
-                android:textAlignment="textEnd"
-                android:textColor="#0074B7"
-                android:textSize="15dp" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="160dp" />
-
+                android:layout_height="20dp" />
             <Button
-                android:id="@+id/login"
-                android:layout_width="wrap_content"
+                android:id="@+id/createAccount"
+                android:layout_width="336dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="#0074B7"
-                android:text="Sign In"
+                android:text="Create Account"
                 tools:layout_editor_absoluteX="158dp"
                 tools:layout_editor_absoluteY="588dp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="30dp" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true">
-
-                <TextView
-                    android:id="@+id/tvText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Don't have an account?"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="16dp"
-                    android:layout_toLeftOf="@id/tvText"
-                    android:background="#FF0000" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="16dp"
-                    android:layout_toRightOf="@id/tvText"
-                    android:background="#FF0000" />
-
-            </RelativeLayout>
-
-            <Button
-                android:id="@+id/register"
-                android:layout_width="match_parent"
-                android:layout_height="59dp"
-                android:layout_gravity="center"
-                android:backgroundTint="#FFFFFF"
-                android:text="Create a new account"
-                android:textColor="#0074B7"
-                tools:layout_editor_absoluteX="7dp" />
         </LinearLayout>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
